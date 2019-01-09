@@ -11,11 +11,19 @@
 
 
 <script type='text/ecmascript-6'>
+  import {mapActions} from 'vuex'
   import FooterGuider from './components/FooterGuide/FooterGuide.vue'
+  
   export default {
+    mounted () {
+      this.getAddress()
+    },
+    methods:{
+      ...mapActions(['getAddress'])
+    },
     components: {
       FooterGuider
-    }
+    },
   }
 </script>
 
